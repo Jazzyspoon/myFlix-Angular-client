@@ -110,7 +110,6 @@ public deleteFavoriteMovies(userDetails: any): Observable<any> {
   );
 }
 
-
 private handleError(error: HttpErrorResponse): any {
     if (error.error instanceof ErrorEvent) {
     console.error('Some error occurred:', error.error.message);
