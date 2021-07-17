@@ -26,12 +26,12 @@ export class FetchApiDataService {
 
   /**
    * API call to register new user account
-   * @param userData
+   * @param userDetails
    * @returns
    */
-  public userRegistration(userData: any): Observable<any> {
-    console.log(userData);
-    return this.http.post(apiUrl + 'users', userData).pipe(
+  public userRegistration(userDetails: any): Observable<any> {
+    console.log(userDetails);
+    return this.http.post(apiUrl + 'users', userDetails).pipe(
     catchError(this.userRegistrationHandleError)
     );
   }
@@ -59,13 +59,13 @@ export class FetchApiDataService {
 
   /**
    * Handles user login HTTP request
-   * @param userData
+   * @param userDetails
    * @returns
    */
-  public userLogin(userData: any): Observable<any> {
-    console.log(userData);
+  public userLogin(userDetails: any): Observable<any> {
+    console.log(userDetails);
     return this.http
-      .post(apiUrl + 'login', userData)
+      .post(apiUrl + 'login', userDetails)
       .pipe(catchError(this.userLoginHandleError));
   }
 
@@ -316,13 +316,13 @@ export class FetchApiDataService {
 
   /**
    * API call to edit user account details
-   * @param userData
+   * @param userDetails
    * @returns
    */
-  editUser(userData: any): Observable<any> {
+  editUser(userDetails: any): Observable<any> {
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('user');
-    return this.http.put(apiUrl + `users/${user}`, userData, {headers: new HttpHeaders(
+    return this.http.put(apiUrl + `users/${user}`, userDetails, {headers: new HttpHeaders(
       {
         Authorization: 'Bearer ' + token,
       })
