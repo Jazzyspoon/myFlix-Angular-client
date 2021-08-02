@@ -1,1 +1,20 @@
-<p>director-card works!</p>
+<div class="director-container">
+  <mat-toolbar>
+    <mat-toolbar-row class="director-header">
+      <h3 mat-dialog-title class="director-title">
+        {{ data.Name }}
+      </h3>
+      <button
+        mat-icon-button
+        aria-label="Close button with an X"
+        mat-dialog-close
+        color="primary"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-dialog-content class="director-content">
+    {{ data.Bio }}
+  </mat-dialog-content>
+</div>

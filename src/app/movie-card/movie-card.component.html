@@ -1,3 +1,4 @@
+<app-nav-bar></app-nav-bar>
 <div style="display: flex" class="pagelook">
   <mat-card
     class="cardlook"
@@ -18,16 +19,41 @@
     />
     <mat-card-actions class="center">
       <div>
-        <button mat-raised-button color="warn">Genre</button>
-        <button mat-raised-button color="warn">Director</button>
-        <button mat-raised-button color="warn">Synopsis</button>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="openGenreDialog(movie.Genre.Name, movie.Genre.Description)"
+        >
+          Genre
+        </button>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="openDirectorDialog(movie.Director.Name, movie.Director.Bio)"
+        >
+          Director
+        </button>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="openSynopsisDialog(movie.Description)"
+        >
+          Synopsis
+        </button>
       </div>
       <br />
       <div>
-        <p>
-          add to favorites:
-          <mat-icon>favorite_border</mat-icon>
-        </p>
+        <button
+          matTooltip="Favorite movie"
+          matTooltipPosition="above"
+          mat-icon-button
+          aria-label="Adds movie to user's list of favorites"
+        >
+          <mat-icon color="warn">
+            <span *ngIf="isFavorite(movie._id); else elseBlock">star</span>
+            <ng-template #elseBlock>favorite_border</ng-template>
+          </mat-icon>
+        </button>
       </div>
     </mat-card-actions>
   </mat-card>

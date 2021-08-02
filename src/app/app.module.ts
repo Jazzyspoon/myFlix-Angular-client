@@ -31,15 +31,11 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { GenreCardComponent } from './genre-card/genre-card.component';
 import { SynopsisCardComponent } from './synopsis-card/synopsis-card.component';
 import { DirectorCardComponent } from './director-card/director-card.component';
-import { AddtofavCardComponent } from './addtofav-card/addtofav-card.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
-  { path: 'genre', component: GenreCardComponent },
-  { path: 'director', component: DirectorCardComponent },
-  { path: 'description', component: SynopsisCardComponent },
-  { path: 'favorites', component: AddtofavCardComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
 
@@ -53,7 +49,7 @@ const appRoutes: Routes = [
     GenreCardComponent,
     SynopsisCardComponent,
     DirectorCardComponent,
-    AddtofavCardComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
