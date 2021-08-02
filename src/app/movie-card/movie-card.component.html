@@ -1,12 +1,14 @@
 <app-nav-bar></app-nav-bar>
-<div style="display: flex" class="pagelook">
+<div class="movies-container pagelook">
   <mat-card
-    class="cardlook"
+    class="movie-card-container"
     *ngFor="let movie of movies"
     style="flex: 1 1 auto"
   >
-    <mat-card-header>
-      <mat-card-title class="textcolor1">{{ movie.Title }}</mat-card-title>
+    <mat-card-header class="movie-card-header">
+      <mat-card-title class="movie-card-title">{{
+        movie.Title
+      }}</mat-card-title>
 
       <mat-card-subtitle class="textcolor1"
         >Directed by: {{ movie.Director.Name }}</mat-card-subtitle
@@ -17,8 +19,15 @@
       alt="{{ movie.Title }}"
       class="movieimgimports"
     />
-    <mat-card-actions class="center">
-      <div>
+    <mat-card-actions class="movie-card-actions-container">
+      <div class="center">
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="openSynopsisDialog(movie.Description)"
+        >
+          Synopsis
+        </button>
         <button
           mat-raised-button
           color="warn"
@@ -32,13 +41,6 @@
           (click)="openDirectorDialog(movie.Director.Name, movie.Director.Bio)"
         >
           Director
-        </button>
-        <button
-          mat-raised-button
-          color="warn"
-          (click)="openSynopsisDialog(movie.Description)"
-        >
-          Synopsis
         </button>
       </div>
       <br />

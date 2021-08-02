@@ -5,8 +5,8 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-movie-genre',
-  templateUrl: './movie-genre.component.html',
-  styleUrls: ['./movie-genre.component.scss'],
+  templateUrl: './genre-card.component.html',
+  styleUrls: ['./genre-card.component.scss'],
 })
 export class GenreCardComponent implements OnInit {
   /**
