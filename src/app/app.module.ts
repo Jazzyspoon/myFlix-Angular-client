@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
 
 // App Components
 import { FormsModule } from '@angular/forms';
@@ -35,6 +36,10 @@ import { AddtofavCardComponent } from './addtofav-card/addtofav-card.component';
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
+  { path: 'genre', component: GenreCardComponent },
+  { path: 'director', component: DirectorCardComponent },
+  { path: 'description', component: SynopsisCardComponent },
+  { path: 'favorites', component: AddtofavCardComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
 
@@ -64,6 +69,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes),
     MatIconModule,
+    MatMenuModule,
     MatTooltipModule,
     MatProgressSpinnerModule,
     MatToolbarModule,

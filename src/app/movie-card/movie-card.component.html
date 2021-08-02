@@ -1,8 +1,13 @@
-<div style="display: flex">
-  <mat-card *ngFor="let movie of movies" style="flex: 1 1 auto">
+<div style="display: flex" class="pagelook">
+  <mat-card
+    class="cardlook"
+    *ngFor="let movie of movies"
+    style="flex: 1 1 auto"
+  >
     <mat-card-header>
-      <mat-card-title>{{ movie.Title }}</mat-card-title>
-      <mat-card-subtitle
+      <mat-card-title class="textcolor1">{{ movie.Title }}</mat-card-title>
+
+      <mat-card-subtitle class="textcolor1"
         >Directed by: {{ movie.Director.Name }}</mat-card-subtitle
       >
     </mat-card-header>
@@ -11,11 +16,19 @@
       alt="{{ movie.Title }}"
       class="movieimgimports"
     />
-    <mat-card-actions>
-      <button mat-button color="primary">Genre</button>
-      <button mat-button color="primary">Director</button>
-      <button mat-button color="primary">Synopsis</button>
-      <mat-icon>favorite_border</mat-icon>
+    <mat-card-actions class="center">
+      <div>
+        <button mat-raised-button color="warn">Genre</button>
+        <button mat-raised-button color="warn">Director</button>
+        <button mat-raised-button color="warn">Synopsis</button>
+      </div>
+      <br />
+      <div>
+        <p>
+          add to favorites:
+          <mat-icon>favorite_border</mat-icon>
+        </p>
+      </div>
     </mat-card-actions>
   </mat-card>
 </div>
