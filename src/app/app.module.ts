@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 // Angular Material
 import { MatInputModule } from '@angular/material/input';
@@ -26,9 +26,17 @@ import { UserRegistrationFormComponent } from './user-registration-form/user-reg
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MovieCardComponent } from './movie-card/movie-card.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { GenreCardComponent } from './genre-card/genre-card.component';
+import { SynopsisCardComponent } from './synopsis-card/synopsis-card.component';
+import { DirectorCardComponent } from './director-card/director-card.component';
+import { AddtofavCardComponent } from './addtofav-card/addtofav-card.component';
 
-
-
+const appRoutes: Routes = [
+  { path: 'welcome', component: WelcomePageComponent },
+  { path: 'movies', component: MovieCardComponent },
+  { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
+];
 
 @NgModule({
   declarations: [
@@ -36,6 +44,11 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
     UserRegistrationFormComponent,
     UserLoginFormComponent,
     MovieCardComponent,
+    WelcomePageComponent,
+    GenreCardComponent,
+    SynopsisCardComponent,
+    DirectorCardComponent,
+    AddtofavCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +62,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
     MatDialogModule,
     MatSnackBarModule,
     FormsModule,
-    RouterModule,
+    RouterModule.forRoot(appRoutes),
     MatIconModule,
     MatTooltipModule,
     MatProgressSpinnerModule,
@@ -57,6 +70,6 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
     NgbModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
