@@ -3,40 +3,39 @@
   top: 0;
   width: 100%;
   z-index: 100;
-  // background: linear-gradient(to bottom, #caacff, #b388ff);
   background: black;
-}
-
-.nav-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 2px;
 }
 
-.app-title {
-  font-size: 22px;
-  margin-left: 30px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
+// .app-title {
 
-button {
-  font-size: 17px;
+//   font-size: 30px;
+//   margin-left: 20px;
+//   font-weight: bold;
+//   letter-spacing: 3px;
+// }
+
+.nav-item {
+  font-size: 20px;
   letter-spacing: 1px;
   color: #fff;
   font-weight: 700;
+  margin-left: 20px;
 }
 
 .nav-links {
-  margin-right: 35px;
+  margin-right: 15px;
 }
+
 h4 {
   text-align: center;
-  font-size: 28px;
+  font-size: 35px;
   font-style: italic;
   font-weight: 600;
   color: red;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 h3 {

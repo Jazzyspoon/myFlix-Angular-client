@@ -11,6 +11,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./nav-bar.component.scss'],
 })
 export class NavBarComponent implements OnInit {
+  navbarOpen = false;
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
   /**
    * @param snackBar
    * @param router
