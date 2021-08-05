@@ -33,10 +33,10 @@ import { SynopsisCardComponent } from './synopsis-card/synopsis-card.component';
 import { DirectorCardComponent } from './director-card/director-card.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { FooterComponent } from './footer/footer.component';
 import { UserProfileUpdateComponent } from './user-profile-update/user-profile-update.component';
 import { UserProfileDeleteComponent } from './user-profile-delete/user-profile-delete.component';
 
+// app route paths
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
@@ -56,7 +56,6 @@ const appRoutes: Routes = [
     DirectorCardComponent,
     NavBarComponent,
     UserProfileComponent,
-    FooterComponent,
     UserProfileUpdateComponent,
     UserProfileDeleteComponent,
   ],
