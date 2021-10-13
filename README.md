@@ -4,5 +4,5 @@ This is a netflix style mock up made in my CAREER FOUNDRY full stack web develop
 
 <img src="https://github.com/Jazzyspoon/myFlix-Angular-client/blob/master/angularmovieflix.JPG"></img>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` to get it up and running after 'npm install' and 'npm update'.
 
